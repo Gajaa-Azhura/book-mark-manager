@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark Manager</title>
+    <style>
+        /* Basic CSS for layout and styling */
+        .bookmark-item { border: 1px solid #ddd; padding: 10px; margin-bottom: 8px; display: flex; align-items: center; }
+        .bookmark-actions { margin-left: auto; }
+        /* ... more styles ... */
+    </style>
+</head>
+<body>
+    <h1>Bookmark Manager</h1>
+
+    <div id="add-bookmark-section">
+        <h2>Add New Bookmark</h2>
+        <form id="add-bookmark-form">
+            <label for="title">Title:</label>
+            <input type="text" id="title" required><br><br>
+
+            <label for="url">URL:</label>
+            <input type="url" id="url" placeholder="http:// or https://" required><br><br>
+
+            <label for="category">Category:</label>
+            <select id="category">
+                <option value="Work">Work</option>
+                <option value="Study">Study</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Other">Other</option>
+            </select><br><br>
+
+            <button type="submit">Add Bookmark</button>
+        </form>
+    </div>
+
+    <div id="filter-search-section">
+        <h2>Filter & Search</h2>
+        <div>
+            <label for="filter-category">Filter by Category:</label>
+            <select id="filter-category">
+                <option value="">All Categories</option>
+                <option value="Work">Work</option>
+                <option value="Study">Study</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+        <div>
+            <label for="search-term">Search Bookmarks:</label>
+            <input type="text" id="search-term" placeholder="Search title or URL">
+        </div>
+    </div>
+
+    <div id="bookmarks-list">
+        <h2>My Bookmarks</h2>
+        <p id="no-bookmarks">No bookmarks added yet.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
